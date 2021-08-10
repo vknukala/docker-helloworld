@@ -26,6 +26,8 @@ target/
 .classpath
 .project
 
+# OS
+.DS_Store
 
 # Misc
 release.properties

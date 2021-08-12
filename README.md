@@ -18,15 +18,16 @@ Docker image is created in 2 ways
           - run  `docker build -t imageName`  to create the image
             > docker build . -t helloworlddocker
           - run `docker images` to get overview of newly created image
-          - Create container using `docker run --name myProgram imageName -d -phostmachineport:containerport`
-            > docker run -e "SPRING_PROFILES_ACTIVE=test" -d -p8222:8222 --name dockerexmaples helloworlddocker
+          - Create container using
+        
+            `docker run --name myProgram imageName -d -phostmachineport:containerport`
+            > docker run -e "SPRING_PROFILES_ACTIVE=test" -d -p8222:8222 --name dockerexamples helloworlddocker
       - Run localhost:8222 to view the message 
    
    b. Spring boot layer Index
-
-       > To be Implemented
+      > to be implemented
 2. Using Spring Boot build-image goal
-     - This plugin creates OpenCloudInitiative(OCI) image from jar using CloudNativeBuildpacks (CNB)
+     - This plugin creates OpenCloudInitiative(OCI) image from jar using CNB. Check [CloudNativeBuildpacks](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#features.container-images.building.buildpacks)
      - Images are build and run as not root users
      - Run `mvn  spring-boot:build-image  -Dspring-boot.build-image.imageName=imageName` to create an image
        > `mvn  spring-boot:build-image  -Dspring-boot.build-image.imageName=helloworldimagefromspringboot`
